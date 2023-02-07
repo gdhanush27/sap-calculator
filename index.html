@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      form {
+        max-width: 500px;
+        margin: 50px auto;
+        text-align: center;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .form-group label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .form-group input[type="file"] {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        width: 100%;
+      }
+
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/result" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="image">Select an Image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
